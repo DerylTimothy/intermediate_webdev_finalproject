@@ -10,15 +10,22 @@ function calculateSimpleInterest(principal, rate, time) {
     return (p * r * t) / 100;
 }
 
+function calculateTotalAmount(principal, interest) {
+    return parseFloat(principal) + parseFloat(interest);
+}
+
 function calculate() {
-    const principal = document.getElementById("principal").value;
-    const rate = document.getElementById("rate").value;
-    const time = document.getElementById("time").value;
+    const principal = parseFloat(document.getElementById("principal").value);
+    const rate = parseFloat(document.getElementById("rate").value);
+    const time = parseFloat(document.getElementById("time").value);
 
     const interest = calculateSimpleInterest(principal, rate, time);
+    const totalAmount = calculateTotalAmount(principal, interest);
+
     document.getElementById("result").innerText = "Total Interest: $" + interest.toFixed(2);
+    document.getElementById("total").innerText = "Total Amount: $" + totalAmount.toFixed(2);
 }
 
 if (typeof module !== "undefined" && module.exports) {
-    module.exports = { calculateSimpleInterest };
+    module.exports = { calculateSimpleInterest, calculateTotalAmount };
 }
