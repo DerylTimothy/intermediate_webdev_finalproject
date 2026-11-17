@@ -1,24 +1,29 @@
-function calculateSimpleInterest(principal, rate, years) {
-    const p = parseFloat(principal);
-    const r = parseFloat(rate);
-    const t = parseFloat(years);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simple Interest Rate Calculator to compute total interest and final amount easily.">
+    <meta name="keywords" content="interest rate calculator, simple interest, finance calculator">
+    <title>Simple Interest Rate Calculator</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Interest Calculator</h1>
+        <label for="principal">Principal Amount ($):</label>
+        <input type="number" id="principal" placeholder="Enter principal amount">
 
-    if (isNaN(p) || isNaN(r) || isNaN(t)) {
-        throw new Error("All inputs must be valid numbers");
-    }
+        <label for="rate">Annual Interest Rate (%):</label>
+        <input type="number" id="rate" placeholder="Enter interest rate">
 
-    return (p * r * t) / 100;
-}
+        <label for="time">Time (Years):</label>
+        <input type="number" id="time" placeholder="Enter number of years">
 
-function calculate() {
-    const principal = document.getElementById("principal").value;
-    const rate = document.getElementById("rate").value;
-    const years = document.getElementById("years").value;
-
-    const interest = calculateSimpleInterest(principal, rate, years);
-    document.getElementById("result").innerText = "Total Interest: $" + interest.toFixed(2);
-}
-
-if (typeof module !== "undefined" && module.exports) {
-    module.exports = { calculateSimpleInterest };
-}
+        <button onclick="calculate()">Calculate</button>
+        <p id="result"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
