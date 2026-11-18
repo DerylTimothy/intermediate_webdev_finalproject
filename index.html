@@ -4,34 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Simple Interest and Total Payable Amount Calculator">
-    <meta name="keywords" content="Simple Interest, Calculator, Finance, Interest Rate, Total Payable">
-    <meta name="author" content="Deryl Timothy">
-    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Simple Interest, Calculator, Finance, Interest Rate">
     <title>Simple Interest Calculator</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>Simple Interest Calculator</h1>
         <form id="interest-form">
-            <div class="form-group">
-                <label for="principal">Principal Amount:</label>
-                <input type="number" id="principal" placeholder="Enter principal amount" required>
-            </div>
-            <div class="form-group">
-                <label for="rate">Rate of Interest (%):</label>
-                <input type="number" id="rate" placeholder="Enter interest rate" required>
-            </div>
-            <div class="form-group">
-                <label for="time">Time (Years):</label>
-                <input type="number" id="time" placeholder="Enter time in years" required>
-            </div>
+            <label for="principal">Principal Amount:</label>
+            <input type="number" id="principal" placeholder="Enter principal amount" required>
+            <label for="rate">Rate of Interest (%):</label>
+            <input type="number" id="rate" placeholder="Enter interest rate" required>
+            <label for="time">Time (Years):</label>
+            <input type="number" id="time" placeholder="Enter time in years" required>
             <button type="button" id="calculate-btn" onclick="calculate()">Calculate</button>
         </form>
         <div id="result"></div>
     </div>
     <script src="script.js"></script>
+    <template id="source-code">
+        &lt;head&gt;
+        &lt;title&gt;Simple Interest Calculator&lt;/title&gt;
+        &lt;meta name="description" content="Simple Interest and Total Payable Amount Calculator"&gt;
+        &lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;
+        &lt;link rel="stylesheet" href="style.css"&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;h1&gt;Simple Interest Calculator&lt;/h1&gt;
+        &lt;script src="script.js"&gt;&lt;/script&gt;
+        &lt;/body&gt;
+    </template>
 </body>
 </html>
